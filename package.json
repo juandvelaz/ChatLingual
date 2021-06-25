@@ -1,0 +1,31 @@
+{
+  "name": "ChatLingual",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "start-dev": "webpack -w & nodemon -q server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juandvelaz/ChatLingual.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juandvelaz/ChatLingual/issues"
+  },
+  "homepage": "https://github.com/juandvelaz/ChatLingual#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0"
+  }
+}
