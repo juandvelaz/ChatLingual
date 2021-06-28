@@ -19,10 +19,10 @@
   },
   "homepage": "https://github.com/juandvelaz/ChatLingual#readme",
   "dependencies": {
+    "chalk": "^4.1.1",
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "chalk": "^4.1.1",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.7",
     "webpack": "^5.38.1",
