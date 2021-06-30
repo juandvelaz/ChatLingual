@@ -2,6 +2,7 @@ const chalk = require('chalk');
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+const db = require('./db');
 
 const app = express();
 
@@ -46,13 +47,16 @@ app.use((err, req, res, next) => {
 const PORT = process.env.PORT || 5000; // Heroku compatible
 
 // Server
-const startServer = () => {
-  app.listen(PORT, () => {
-    console.log(
-      chalk.bold.cyan(`\nServer listening on`),
-      chalk.bold.blue(`http://localhost:${PORT}/`)
-    );
-  });
+const startServer = async () => {
+  try {
+    await db.sync();
+    app.listen(PORT, () => {
+      console.log(
+        chalk.bold.cyan(`\nServer listening on`),
+        chalk.bold.blue(`http://localhost:${PORT}/`)
+      );
+    });
+  } catch (error) {}
 };
 startServer();
 
