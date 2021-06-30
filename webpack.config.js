@@ -3,7 +3,7 @@ module.exports = {
   mode: 'development',
   output: {
     path: __dirname,
-    filename: './public/bundle.js',
+    filename: './public/webpack/bundle.js',
   },
   devtool: 'source-map',
   module: {

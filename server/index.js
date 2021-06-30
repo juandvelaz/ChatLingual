@@ -25,6 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Static middleware
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../public/webpack')));
 
 // Send index.html as default
 app.get('*', (req, res) => {
