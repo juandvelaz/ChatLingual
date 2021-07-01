@@ -43,20 +43,23 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).send(err.message || 'Internal server error');
 });
 
-// Server port
-const PORT = process.env.PORT || 5000; // Heroku compatible
-
-// Server
-const startServer = async () => {
+// Database
+const syncDatabase = async () => {
   try {
     await db.sync();
-    app.listen(PORT, () => {
-      console.log(
-        chalk.bold.cyan(`\nServer listening on`),
-        chalk.bold.blue(`http://localhost:${PORT}/`)
-      );
-    });
   } catch (error) {}
+};
+syncDatabase();
+
+// Server
+const PORT = process.env.PORT || 5000; // Heroku compatible
+const startServer = async () => {
+  app.listen(PORT, () => {
+    console.log(
+      chalk.bold.cyan(`\nServer listening on`),
+      chalk.bold.blue(`http://localhost:${PORT}/`)
+    );
+  });
 };
 startServer();
 
