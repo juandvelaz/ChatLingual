@@ -9,7 +9,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <NavBar />
-      <Route exact path="/" component={Register} />
+      <Route exact path="/" component={Home} />
+      <Route path="/register" component={Register} />
     </Router>
   </Provider>,
   document.getElementById('index')

@@ -2,9 +2,9 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
 
-import NewUser from './NewUser';
+import User from './User';
 
-const reducer = combineReducers({ NewUser });
+const reducer = combineReducers({ User });
 
 const middleware = applyMiddleware(
   thunkMiddleware,
