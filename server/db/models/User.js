@@ -15,6 +15,9 @@ module.exports = db.define('user', {
       notEmpty: true,
     },
   },
+  userPassword: {
+    type: Sequelize.STRING,
+  },
   userImageUrl: {
     type: Sequelize.TEXT,
     defaultValue:
