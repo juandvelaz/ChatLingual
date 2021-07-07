@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-export class NavBar extends Component {
+export class Register extends Component {
   render() {
-    return <div>NAVBAR</div>;
+    return <div>REGISTER</div>;
   }
 }
 
@@ -11,4 +11,4 @@ const mapStateToProps = (state) => ({});
 
 const mapDispatchToProps = {};
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
+export default connect(mapStateToProps, mapDispatchToProps)(Register);
