@@ -33,8 +33,12 @@ export class Register extends Component {
         <form onSubmit={handleSubmit}>
           <label htmlFor="userName">Username:</label>
           <input name="userName" onChange={handleChange} value={userName} />
-          <label htmlFor="password">Password:</label>
-          <input name="password" onChange={handleChange} value={userPassword} />
+          <label htmlFor="userPassword">Password:</label>
+          <input
+            name="userPassword"
+            onChange={handleChange}
+            value={userPassword}
+          />
           <button type="submit">Submit</button>
         </form>
       </div>

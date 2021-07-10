@@ -2167,9 +2167,9 @@ class Register extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       onChange: handleChange,
       value: userName
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
-      htmlFor: "password"
+      htmlFor: "userPassword"
     }, "Password:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-      name: "password",
+      name: "userPassword",
       onChange: handleChange,
       value: userPassword
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
